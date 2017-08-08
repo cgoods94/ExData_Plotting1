@@ -1,3 +1,7 @@
+
+## This takes the unzipped household_power_consumption.txt file, pulls the assignment data in and cleans it for
+## use in the plots. I just wrote one function that cleans the data instead of putting it in all of four plot
+## files because it's a slow and expensive process and should only be done once honestly.
 get_and_clean <- function()
 {
     if(!file.exists('household_power_consumption.txt'))
