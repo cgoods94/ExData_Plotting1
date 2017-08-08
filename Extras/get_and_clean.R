@@ -9,6 +9,7 @@ get_and_clean <- function()
         stop("Please ensure that the unzipped file 'household_power_consumption.txt' is present in the
               working directory and try again.")
     }
+    library(sqldf)
     library(lubridate)
     hhpowercon <- read.csv2.sql('household_power_consumption.txt',
                                 sql = "select * from file where Date == '1/2/2007' OR Date == '2/2/2007'",
